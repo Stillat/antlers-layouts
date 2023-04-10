@@ -13,7 +13,8 @@
     "require": {
         "php": "^7.3|^8.0",
         "statamic/cms": "^3.3.21",
-        "laravel/pint": "^1.8"
+        "laravel/pint": "^1.8",
+        "laravel/framework": "^9.36"
     },
     "require-dev": {
         "mockery/mockery": "^1.2.3",
