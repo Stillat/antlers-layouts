@@ -42,7 +42,7 @@ We can use the `layout:share` Tag to pass data to our Antlers layout files:
                 :variable_three="title" /}}
 ```
 
-> It is important to note that the `layout:share` template will only pass custom variables to the standard `layout.antlers.html` template file, and custom layouts located within the `resources/views/layouts/` folder.
+> It is important to note that the `layout:share` Tag will only pass custom variables to the standard `layout.antlers.html` template file, and custom layouts located within the `resources/views/layouts/` folder.
 
 Our custom variables created using the `layout:share` Tag will now be available to us in our layout file like any other variable:
 
