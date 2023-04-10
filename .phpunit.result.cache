@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Warning":6,"Tests\\LayoutChangeTest::testLayoutsCanBeChanged":3,"Tests\\LayoutChangeTest::testVariablesCanBeSharedWithLayouts":3},"times":{"Warning":0.004,"Tests\\LayoutChangeTest::testLayoutsCanBeChanged":1.157,"Tests\\LayoutChangeTest::testVariablesCanBeSharedWithLayouts":0.714}}
