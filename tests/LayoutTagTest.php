@@ -6,7 +6,7 @@ use Statamic\Facades\Collection;
 use Statamic\Facades\Entry;
 use Stillat\AntlersLayouts\Tags\Layout;
 
-class LayoutChangeTest extends BaseTestCase
+class LayoutTagTest extends BaseTestCase
 {
     use FakesViews;
 
