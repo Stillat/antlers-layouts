@@ -21,7 +21,7 @@ class LayoutTagTest extends BaseTestCase
         $collection = Collection::make('test')->routes('{slug}')->save();
         $collection->save();
 
-        Entry::make()->collection('test')->slug('test')->data(['title' => 'Test'])->save();
+        Entry::make()->collection('test')->locale('default')->slug('test')->data(['title' => 'Test'])->save();
     }
 
     private function createFakeViews()
@@ -43,12 +43,12 @@ class LayoutTagTest extends BaseTestCase
         $this->get('test')->assertOk()
             ->assertSee('The default layout: The default template content.');
 
-        $this->viewShouldReturnRaw('default', '{{ layout layout="layouts/one" }} Custom Content');
+        $this->viewShouldReturnRaw('default', '{{ %layout layout="layouts/one" }} Custom Content');
 
         $this->get('test')->assertOk()
             ->assertSee('I am layout one:  Custom Content');
 
-        $this->viewShouldReturnRaw('default', '{{ layout:layouts/two }} Custom Content');
+        $this->viewShouldReturnRaw('default', '{{ %layout:layouts/two }} Custom Content');
 
         $this->get('test')->assertOk()
             ->assertSee('I am layout two:  Custom Content');
@@ -59,11 +59,11 @@ class LayoutTagTest extends BaseTestCase
         $this->createFakeViews();
         Layout::register();
 
-        $this->viewShouldReturnRaw('default', '{{ layout:layouts/test-layout }} Content {{ layout:share custom_var="Hello" }}');
+        $this->viewShouldReturnRaw('default', '{{ %layout:layouts/test-layout }} Content {{ %layout:share custom_var="Hello" }}');
         $this->get('test')->assertOk()
             ->assertSee('Test Layout:  Content  -- Hello');
 
-        $this->viewShouldReturnRaw('default', '{{ layout:layouts/test-layout }} Content');
+        $this->viewShouldReturnRaw('default', '{{ %layout:layouts/test-layout }} Content');
 
         $this->get('test')->assertOk()
             ->assertSee('Test Layout:  Content --');
