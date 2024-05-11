@@ -12,7 +12,7 @@
     },
     "require": {
         "php": "^8.0",
-        "statamic/cms": "^4 || ^5"
+        "statamic/cms": "^4.57 || ^5"
     },
     "require-dev": {
         "mockery/mockery": "^1.2.3",
