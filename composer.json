@@ -12,12 +12,12 @@
     },
     "require": {
         "php": "^8.0",
-        "statamic/cms": "^4"
+        "statamic/cms": "^4.57 || ^5"
     },
     "require-dev": {
         "mockery/mockery": "^1.2.3",
         "laravel/pint": "^1.8",
-        "orchestra/testbench": "^7.0 || ^8.0"
+        "orchestra/testbench": "^7.0 || ^8.0 || ^9"
     },
     "extra": {
         "statamic": {
